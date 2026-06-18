@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LumiOS</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="os">
+
+  <div id="osbg">
+    <svg viewBox="0 0 1440 900">
+      <!-- all your SVG circles remain here exactly as they are -->
+    </svg>
+
+    <div id="desktop-clock">
+      <div id="big-time">--:--</div>
+      <div id="big-date">Loading…</div>
+    </div>
+
+    <div id="desktop-icons"></div>
+  </div>
+
+  <div id="wlayer"></div>
+
+  <div id="notif">
+    <div class="notif-app">LumiOS</div>
+    <div class="notif-msg" id="notif-msg"></div>
+  </div>
+
+  <div id="tbar">
+    <button class="tbb" id="sm-btn" onclick="toggleSM()" style="width:38px;padding:0;justify-content:center;flex-shrink:0;">
+      <i class="ti ti-layout-grid"></i>
+    </button>
+
+    <div class="tbar-sep"></div>
+    <div id="tbar-apps"></div>
+
+    <div id="tbar-tray">
+      <i class="ti ti-wifi"></i>
+      <i class="ti ti-volume"></i>
+      <i class="ti ti-bell"></i>
+      <span id="tbar-clock">--:--</span>
+    </div>
+  </div>
+
+  <div id="smenu">
+    <div class="sm-header">
+      <i class="ti ti-layout-grid"></i>
+      LumiOS
+    </div>
+
+    <input
+      id="sm-search"
+      type="text"
+      placeholder="Search apps…"
+      oninput="filterSM(this.value)"
+    >
+
+    <div class="sm-section-label">ALL APPS</div>
+
+    <div id="sm-grid"></div>
+
+    <div class="sm-footer">
+      <div class="sm-user">
+        <i class="ti ti-user"></i>
+        lumi-user
+      </div>
+
+      <button class="sm-signout-btn" onclick="notify('Sign-out is a demo feature')">
+        <i class="ti ti-power"></i>
+        Sign out
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
